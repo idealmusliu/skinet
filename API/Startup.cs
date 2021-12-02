@@ -1,5 +1,4 @@
 using Core.Interfaces;
-using Infrastructure;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,7 +29,7 @@ namespace API
             services.AddControllers();
 
             services.AddDbContext<StoreContext>(x =>
-            x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
+            x.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
 
             services.AddSwaggerGen(c =>
             {
