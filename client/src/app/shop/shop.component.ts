@@ -43,7 +43,7 @@ export class ShopComponent implements OnInit {
         error: error => {
           console.log(error);
         }
-      })
+      });
   }
 
   getBrands() {
@@ -54,7 +54,7 @@ export class ShopComponent implements OnInit {
       error: error => {
         console.log(error);
       }
-    })
+    });
   }
 
   getTypes() {
@@ -65,7 +65,7 @@ export class ShopComponent implements OnInit {
       error: error => {
         console.log(error);
       }
-    })
+    });
   }
 
   onBrandSelected(brandId: number) {
